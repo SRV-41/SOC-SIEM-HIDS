@@ -1,0 +1,18 @@
+[Unit]
+Description=SOC SIEM Dashboard
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/opt/soc
+EnvironmentFile=/opt/soc/.env
+ExecStart=/opt/soc/venv/bin/python /opt/soc/app.py
+Restart=on-failure
+RestartSec=3
+KillMode=control-group
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

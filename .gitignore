@@ -1,0 +1,32 @@
+# Конфигурация с паролями и личными данными — НИКОГДА не публиковать
+.env
+
+# База данных SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+env/
+*.egg-info/
+
+# Логи
+*.log
+
+# Резервные копии
+*.old
+*.bak
+*.zip
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
